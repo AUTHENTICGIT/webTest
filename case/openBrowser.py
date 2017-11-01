@@ -1,8 +1,5 @@
 from selenium import webdriver
 from time import sleep
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 class Driver:
     def __init__(self):
@@ -48,5 +45,6 @@ class Driver:
         print("\n脚本结束！共转发" + str(i+1) +"条微博")
     def close(self):
         self.driver.close()
+
 driver = Driver()
 driver.open()
