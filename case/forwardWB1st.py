@@ -9,7 +9,6 @@ class Driver:
         self.url = 'https://passport.weibo.cn/signin/login'
         self.account = '13093870429'
         self.pwd = 'Akira0429'
-        self.keyword = keywords()
     def open(self):
         self.driver.get(self.url)
         sleep(3)
@@ -35,7 +34,7 @@ class Driver:
             self.driver.find_element_by_xpath("/html/body/div/div[1]/div[2]/div/div/footer/div[1]").click()
             sleep(2)
             print(">>>转发语>>>")
-            self.driver.find_element_by_xpath("/html/body/div/div[1]/div/main/div[1]/div/span/textarea[1]").send_keys(self.keyward, str(i+1))
+            self.driver.find_element_by_xpath("/html/body/div/div[1]/div/main/div[1]/div/span/textarea[1]").send_keys('关键字', str(i+1))
             sleep(2)
             # 选择公开/私密
             # self.driver.find_element_by_xpath("/html/body/div/div[1]/div/footer/div[1]/div[2]").click()
@@ -45,8 +44,15 @@ class Driver:
             print(">>>转发第" + str(i+1) +"条>>>")
             sleep(4)
         print("\n脚本结束！共转发" + str(i+1) +"条微博")
-    def keywords(self):
-        os.chdir(r'C:\Users\XLY-LR\Desktop\scrapy\proxy')
+    def words(self):
+        os.chdir('../file')
+        fh = open('Tag_emoji.txt', 'r')
+        lines = fh.readlines()
+        tags = list()
+        for line in lines:
+            print(line)
+            tags.append(line)
+        return tags
 
     def close(self):
         self.driver.close()
