@@ -5,7 +5,7 @@ import os
 
 class Driver:
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         self.url = 'https://passport.weibo.cn/signin/login'
         self.account = '13093870429'
         self.pwd = 'Akira0429'
@@ -31,7 +31,7 @@ class Driver:
         # self.driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[2]/div[1]/div[2]/section/div[1]/div[2]/section").click()
         self.driver.get("https://m.weibo.cn/status/4169399802125047")
         sleep(2)
-        for i in range(59,71):
+        for i in range(59,70):
             # 转发微博
             print(">>>打开转发框>>>")
             self.driver.find_element_by_xpath("/html/body/div/div[1]/div[2]/div/div/footer/div[1]").click()
