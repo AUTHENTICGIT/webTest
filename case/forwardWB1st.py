@@ -31,7 +31,7 @@ class Driver:
         # self.driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[2]/div[1]/div[2]/section/div[1]/div[2]/section").click()
         self.driver.get("https://m.weibo.cn/status/4169399802125047")
         sleep(2)
-        for i in range(59,70):
+        for i in range(59,71):
             # 转发微博
             print(">>>打开转发框>>>")
             self.driver.find_element_by_xpath("/html/body/div/div[1]/div[2]/div/div/footer/div[1]").click()
