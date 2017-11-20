@@ -12,6 +12,8 @@ class Log:
         # create result file if it doesn't exist
         if not os.path.exists(resultPath):
             os.mkdir(resultPath)
+        # defined test result file name by localtime
+        logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M%S")))
         # create test result file if it doesn't exist
         if not os.path.exists(logPath):
             os.mkdir(logPath)
@@ -28,3 +30,22 @@ class Log:
         handler.setFormatter(formatter)
         # add handler
         self.logger.addHandler(handler)
+
+class MyLog:
+    log = None
+    mutex = threading.Lock()
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def get_log():
+
+        if MyLog.log is None:
+            MyLog.mutex.acquire()
+            MyLog.log = Log()
+            MyLog.mutex.release()
+
+        return MyLog.log
+if __name__ == "__main__":
+    log = MyLog.get_log()
