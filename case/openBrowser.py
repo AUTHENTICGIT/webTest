@@ -5,8 +5,8 @@ class Driver:
     def __init__(self):
         self.driver = webdriver.Firefox()
         self.url = 'https://passport.weibo.cn/signin/login'
-        self.account = 'fakeleogwork@gmail.com'
-        self.pwd = 'fakeksxyhzgdnz007'
+        self.account = 'fakebalabala@gmail.com'
+        self.pwd = 'fakebalabala'
     def open(self):
         self.driver.get(self.url)
         sleep(3)
