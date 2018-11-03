@@ -3,9 +3,15 @@ from time import sleep
 
 class Driver():
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        # 找到firefox插件配置的路径
+        self.profile_directory = r'C:\Users\XLY_LR\AppData\Roaming\Mozilla\Firefox\Profiles\glqc2f1m.default'
+        # 加载插件配置
+        self.profile = webdriver.FirefoxProfile(self.profile_directory)
+        # 启动浏览器配置
+        self.driver = webdriver.Firefox(self.profile)
+        # self.driver = webdriver.Firefox()
         self.url = "https://www.mgtv.com/l/100018346/4351339.html"
-        self.loops = 1000
+        self.loops = 100
 
     def open(self):
         # 打开页面
