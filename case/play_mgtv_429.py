@@ -39,23 +39,23 @@ class Driver():
             # 1
             self.driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div/div/ul/li[1]').click()
             print('>>> Display loop {}~1'.format(i+2))
-            sleep(5)
+            sleep(18)
             # 2
             self.driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div/div/ul/li[2]').click()
             print('>>> Display loop {}~2'.format(i+2))
-            sleep(5)
+            sleep(18)
             # 3
             self.driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div/div/ul/li[3]').click()
             print('>>> Display loop {}~3'.format(i+2))
-            sleep(5)
+            sleep(18)
             # 4
             self.driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div/div/ul/li[4]').click()
             print('>>> Display loop {}~4'.format(i+2))
-            sleep(5)
+            sleep(18)
             # 5
             self.driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div/div/ul/li[5]').click()
             print('>>> Display loop {}~5'.format(i+2))
-            sleep(5)
+            sleep(18)
             # 1
 
             print('>>> Loop {} Complete!'.format(i+2))
